@@ -1,0 +1,16 @@
+
+<h1>The Count homepage</h1>
+
+<h3><a href="{% url 'home' %}">Start again</a> </h3>
+
+<h2>There are {{ wordcount }} words in total</h2>
+
+<h3>Your Text:</h3>
+{{ fulltext }}
+
+<!-- Now set the key-value pair for each word in the wordlistdic that has been converted to a list in views.py -->
+<h4> Word Count: </h4>
+{% for word, wordcounttotal in sortedlist %}
+    {{ word }} ============ {{ wordcounttotal }}
+    <br/>
+{% endfor %}
