@@ -19,7 +19,7 @@ def count(request):
             # Add to the dictionary if word is not in dictionary
             wordlistdic[word] = 1
 
-    sortedlist = sorted(wordlistdic.items(), key=operator.itemgetter(1), reverse=True)  # sort the wordlist                                                                   # convert the wordlistdic to list using .items()
+    sortedlist = sorted(wordlistdic.items(), key=operator.itemgetter(1), reverse=True)  # covert wordlistdic to list & sort the new wordlist                                                                   # convert the wordlistdic to list using .items()
     return render(request, 'count.html', {'fulltext' : fulltext, 'wordcount': len(wordlist), 'sortedlist':sortedlist})
 
 def about(request):
